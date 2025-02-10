@@ -1,3 +1,12 @@
+/*
+ * Login Request
+ * 
+ * Kullanici giris bilgilerini tutan class.
+ * 
+ * Author: Ahmet
+ * Son Guncelleme: 10.02.2025
+*/
+
 package com.ilovemygf.pdfupload.model;
 
 public class LoginRequest {

@@ -1,3 +1,12 @@
+/*
+ * Login Response
+ * 
+ * Client'a token gonderir.
+ * 
+ * Author: Ahmet
+ * Son Guncelleme: 10.02.2025
+*/
+
 package com.ilovemygf.pdfupload.model;
 
 public class LoginResponse {

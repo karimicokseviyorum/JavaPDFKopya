@@ -5,7 +5,7 @@
  * islemlerini yonetir.
  * 
  * Author: Ahmet
- * Son Guncelleme: 13.03.2024
+ * Son Guncelleme: 10.02.2025
  * 
  * TODO:
  * 1. Secret key rotation mekanizmasi eklenebilir

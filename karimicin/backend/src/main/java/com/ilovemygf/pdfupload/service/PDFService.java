@@ -1,9 +1,9 @@
 /*
- * Interface. 
+ * Interface. PDFService icin.
  * 
  * Author: Ahmet
- * Son Guncelleme: 02.10.2025
- * TODO: hicbisiy
+ * Son Guncelleme: 10.02.2025
+ * TODO: --
 */
 
 package com.ilovemygf.pdfupload.service;

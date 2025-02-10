@@ -14,17 +14,15 @@
  * - Dosya sistemi ile etkilesimi yonetir
  * 
  * Author: Ahmet
- * Son Guncelleme: 13.03.2024
+ * Son Guncelleme: 10.02.2025
  * 
  * TODO:
- * 1. Dosya kayit yolu configurable olmali (application.properties'den alinmali)
- * 2. PDF format kontrolu eklenmeli (gercekten PDF mi?)
- * 3. Dosya boyutu limiti eklenmeli (max 10MB gibi)
- * 4. Hata yonetimi gelistirilmeli (try-catch yerine ozel exception'lar)
- * 5. Dosya isimlendirme stratejisi gelistirilmeli (UUID kullanilabilir)
- * 6. Loglama eklenmeli (System.out.println yerine proper logging)
- * 7. Dosya yazma islemini async yapma dusunulebilir
- * 8. Dosya yazma basarisiz olursa cleanup eklenmeli
+ * Uhh, Async yapilabilir.
+ * Ancak, async yapilirken, dosya yazma basarisiz olursa,
+ * cleanup'de hata alinir.
+ * Bizim usecase icin bunun gerek olmadigindan, eminim.
+ * Ancak eklenilmesi guzel olabilir.
+ * Ozel exceptionlar yazilabilir. Aklima gelmiyor.
 */
 
 package com.ilovemygf.pdfupload.service;
@@ -42,7 +40,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 @Service
 public class PDFServiceImpl implements PDFService {
@@ -137,7 +135,7 @@ public class PDFServiceImpl implements PDFService {
         try {
             Files.deleteIfExists(filePath);
         } catch (IOException e) {
-            logger.error("Dosya temizleme hatası: {}", filePath, e);
+            logger.error("Dosya temizleme hatasi: {}", filePath, e);
         }
     }
 }
