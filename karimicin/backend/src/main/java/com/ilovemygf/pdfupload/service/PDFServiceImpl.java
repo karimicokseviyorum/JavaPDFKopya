@@ -15,14 +15,6 @@
  * 
  * Author: Ahmet
  * Son Guncelleme: 10.02.2025
- * 
- * TODO:
- * Uhh, Async yapilabilir.
- * Ancak, async yapilirken, dosya yazma basarisiz olursa,
- * cleanup'de hata alinir.
- * Bizim usecase icin bunun gerek olmadigindan, eminim.
- * Ancak eklenilmesi guzel olabilir.
- * Ozel exceptionlar yazilabilir. Aklima gelmiyor.
 */
 
 package com.ilovemygf.pdfupload.service;
@@ -127,15 +119,7 @@ public class PDFServiceImpl implements PDFService {
             fos.write(pdfData);
             fos.flush();
         } catch (IOException e) {
-            throw new PdfProcessingException("PDF dosyası yazılamadı", e);
-        }
-    }
-
-    private void cleanup(Path filePath) {
-        try {
-            Files.deleteIfExists(filePath);
-        } catch (IOException e) {
-            logger.error("Dosya temizleme hatasi: {}", filePath, e);
+            throw new PdfProcessingException("PDF dosyasi yazilamadi", e);
         }
     }
 }
